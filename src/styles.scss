@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+$primary: rgb(142, 154, 175);
+$secondary: rgb(203, 192, 211);
+$tertiary: rgb(239, 211, 215);
+$quaternary: rgb(222, 226, 255);
+$body-color: rgb(254, 234, 250);
+$fontFam: 'Open Sans', sans-serif;
+
+////////////////////////////////
+
+body {
+  background-color: $body-color;
+}

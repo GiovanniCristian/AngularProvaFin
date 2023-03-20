@@ -1,0 +1,25 @@
+<section *ngIf="isLoggedIn">
+  <div class="login-form">
+    <div class="login-card">
+    </div>
+    <div class="body-card">
+      <input type="text" [value]="setEmail">
+      <hr>
+      <input type="text" [value]="setPassword">
+      <button (click)="login()">Log In</button>
+    </div>
+  </div>
+</section>
+
+<section *ngIf="!isLoggedIn">
+  <div class="register-form">
+    <div class="register-card">
+    </div>
+    <div class="body-card">
+      <input type="email" [value]="setEmail">
+      <hr>
+      <input type="password" [value]="setPassword">
+      <button (click)="signUp()">Register</button>
+    </div>
+  </div>
+</section>
