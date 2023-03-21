@@ -1,0 +1,68 @@
+@import '../../../styles.scss';
+
+//////////////////
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+
+  .header {
+    text-align: center;
+    color: $primary;
+    font-weight: bold;
+  }
+}
+
+.image {
+  margin: 20px auto;
+  width: 400px;
+  height: 420px;
+  background: url(../../../assets/images/bored.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  border-bottom: 5px solid $primary;
+}
+
+section {
+  margin: 50px auto;
+  .section {
+    text-align: center;
+
+    h4 {
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+  }
+
+  .activities {
+    .api {
+      h5 {
+        text-align: center;
+        font-weight: bold;
+        color: $quaternary;
+        font-size: 22px;
+      }
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+
+      button {
+        background-color: $tertiary;
+        color: $primary;
+        width: 150px;
+        height: 40px;
+        text-align: center;
+        font-weight: bold;
+        border-color: $primary;
+        border-radius: 5px;
+        margin-top: 20px;
+      }
+    }
+  }
+}

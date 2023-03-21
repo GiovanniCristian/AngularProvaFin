@@ -5,34 +5,36 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-
   email: string = '';
   password: string = '';
 
-  constructor(private authService:AuthService , private router: Router){}
+  constructor(private authService: AuthService, private router: Router) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  setEmail(email: string) {
+    this.email = email;
+    console.log(this.email);
 
   }
 
-  setEmail (email: string) {
-    return this.email = email;
-  }
+  setPassword(password: string) {
+    this.password = password;
+    console.log(this.password);
 
-  setPassword (password: string) {
-    return this.password = password;
   }
 
   signUp() {
-    localStorage.setItem('registered-user' , this.setEmail(this.email) && this.setPassword(this.password));
+    localStorage.setItem('registered-user', this.email && this.password);
+    console.log(
+      localStorage.setItem('registered-user', this.email && this.password)
+    );
   }
 
-  login () {
-    if (localStorage.getItem('registered-user')) {
-      return this.authService.isLoggedIn() , this.router.navigate(['home']);
-    }
+  login() {
+    return this.authService.isLoggedIn(), this.router.navigate(['home']);
   }
 }

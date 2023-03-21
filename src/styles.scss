@@ -1,12 +1,13 @@
-$primary: rgb(142, 154, 175);
-$secondary: rgb(203, 192, 211);
-$tertiary: rgb(239, 211, 215);
-$quaternary: rgb(222, 226, 255);
-$body-color: rgb(254, 234, 250);
+$primary: rgb(122, 151, 201);
+$secondary: rgb(201, 159, 230);
+$tertiary: rgb(242, 204, 210);
+$quaternary: rgb(226, 229, 249);
+$body-color: rgb(248, 196, 217);
 $fontFam: 'Open Sans', sans-serif;
 
 ////////////////////////////////
 
 body {
   background-color: $body-color;
+  font-family: $fontFam;
 }

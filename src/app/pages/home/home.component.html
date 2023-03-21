@@ -1,8 +1,21 @@
 <header>
-  <h1>Ciao</h1>
+  <div class="header">
+    <h1>Welcome</h1>
+    <h3>Take a look around, you could find a good activity to do...</h3>
+  </div>
 </header>
+<div class="image"></div>
 <section>
-  <div>
-    <h4>Work In Progress</h4>
+  <div class="section">
+    <h4>⬇ Our activities ⬇</h4>
+  </div>
+  <div class="activities">
+    <div class="api">
+      <!-- // ???????????? // -->
+      <h5>{{activity?.activity}}</h5>
+    </div>
+    <div class="btn">
+      <button (click)="findActivity()">Chhose an activity</button>
+    </div>
   </div>
 </section>
