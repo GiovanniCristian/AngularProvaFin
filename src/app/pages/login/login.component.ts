@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit {
   email: string = '';
   password: string = '';
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(public authService: AuthService, private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -27,14 +27,15 @@ export class LoginComponent implements OnInit {
 
   }
 
-  signUp() {
-    localStorage.setItem('registered-user', this.email && this.password);
+  signUp() {                            //creo un oggetto che contiene all'interno mail e passwrd da salvare//
+    localStorage.setItem('registered-user', JSON.stringify({email: this.email, password: this.password}));
     console.log(
-      localStorage.setItem('registered-user', this.email && this.password)
+      localStorage.getItem('registered-user')
     );
+    this.router.navigate(['home']);
   }
 
   login() {
-    return this.authService.isLoggedIn(), this.router.navigate(['home']);
+    this.router.navigate(['home']);
   }
 }

@@ -5,14 +5,11 @@ import { Injectable } from '@angular/core';
 })
 export class AuthService {
 
-  isLogged: boolean = false;
-
   constructor() { }
 
-  isLoggedIn(): boolean {
-    if (localStorage.getItem('regstered-user')) {
-      return this.isLogged = true;
-    } else { return this.isLogged }
+  isRegisteredNow(): boolean {
+    // condizione ternaria //
+    return localStorage.getItem('registered-user') ? true : false;
   }
 
 }
